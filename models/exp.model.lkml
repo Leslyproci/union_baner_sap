@@ -13,7 +13,8 @@ persist_with: exp_default_datagroup
 explore: matriculados_pago {
   join: sap_interfaz_facturacion {
     type: inner
-    sql_on: ${matriculados_pago.identificacion}=${sap_interfaz_facturacion.solicitante} ;;
+    sql_on: ${matriculados_pago.identificacion}=${sap_interfaz_facturacion.solicitante}
+            and ${matriculados_pago.cod_programa}=${sap_interfaz_facturacion.idprograma};;
     relationship: one_to_one
   }
 
