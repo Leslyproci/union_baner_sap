@@ -10,11 +10,11 @@ datagroup: exp_default_datagroup {
 
 persist_with: exp_default_datagroup
 
-explore: matriculados_pago {
+explore: fact_matriculados {
   join: sap_interfaz_facturacion {
     type: inner
-    sql_on: ${matriculados_pago.identificacion}=${sap_interfaz_facturacion.solicitante}
-            and ${matriculados_pago.cod_programa}=${sap_interfaz_facturacion.idprograma};;
+    sql_on: ${fact_matriculados.identificacion}=${sap_interfaz_facturacion.solicitante}
+            and ${fact_matriculados.cod_programa}=${sap_interfaz_facturacion.idprograma};;
     relationship: one_to_one
   }
 
