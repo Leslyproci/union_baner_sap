@@ -14,7 +14,8 @@ explore: fact_matriculados {
   join: sap_interfaz_facturacion {
     type: inner
     sql_on: ${fact_matriculados.identificacion}=${sap_interfaz_facturacion.solicitante}
-            and ${fact_matriculados.cod_programa}=${sap_interfaz_facturacion.idprograma};;
+            and ${fact_matriculados.cod_programa}=${sap_interfaz_facturacion.idprograma}
+            ${fact_matriculados.periodo_codigo}=${fact_matriculados.periodo_academico};;
     relationship: one_to_one
   }
 
