@@ -15,7 +15,7 @@ explore: fact_matriculados {
     type: inner
     sql_on: ${fact_matriculados.identificacion}=${fact_facturacion.solicitante}
             and ${fact_matriculados.cod_programa}=${fact_facturacion.idprograma}
-            ${fact_matriculados.periodo_codigo}=${fact_facturacion.periodo_academico};;
+            and ${fact_matriculados.periodo_codigo}=${fact_facturacion.periodo_academico};;
     relationship: one_to_one
   }
 
