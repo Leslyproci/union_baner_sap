@@ -137,10 +137,6 @@ view: fact_matriculados {
     sql: ${TABLE}.COD_SEXO ;;
   }
 
-  dimension: cod_sexo_1 {
-    type: string
-    sql: ${TABLE}.COD_SEXO_1 ;;
-  }
 
   dimension: cod_subnivel_academico {
     type: string
