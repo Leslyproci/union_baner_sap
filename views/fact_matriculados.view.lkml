@@ -696,4 +696,8 @@ view: fact_matriculados {
     type: count
     drill_fields: []
   }
+  measure: ingreso_por_facultad {
+    type: sum
+    sql: CAST(${valor_pago_detalle} AS FLOAT64);;
+  }
 }

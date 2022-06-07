@@ -23,5 +23,6 @@ explore: fact_matriculados {
     type: inner
     sql_on: ${fact_facturacion.asignacion}=${sap_interfaz_recaudo.asignacion} ;;
     relationship: one_to_one
+    sql_where: ${sap_interfaz_recaudo.textodocumento}!= "CARGO MATRICULA EXTRAORD" ;;
   }
 }
